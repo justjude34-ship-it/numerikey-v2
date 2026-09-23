@@ -55,6 +55,7 @@
       margin-inline: auto;
       border-radius: 1.05rem;
       box-shadow: 0 22px 50px rgba(20, 0, 16, .4);
+      image-rendering: auto;
     }
     .hero h1 {
       font-family: "Cormorant Garamond", serif;
@@ -152,7 +153,7 @@
   <main>
     <section class="hero">
       <div class="hero-frame">
-        <img class="hero-poster" src="hero.svg" alt="NumeraKey — the key to your numbers" width="900" height="1283" />
+        <img class="hero-poster" src="hero.svg?v=painted-1052" alt="NumeraKey — the key to your numbers" width="1052" height="1500" />
       </div>
       <h1>Tools you keep.</h1>
       <p>Progressive web apps for numerology, breath, sleep, and hard days. They live on your phone. No account required to use the tools. Buy once, own forever — no subscription.</p>
@@ -166,10 +167,9 @@
     <section id="apps">
       <div class="tabs" id="tabs">
         <button class="tab active" data-cat="all">All</button>
-        <button class="tab" data-cat="sound">Sound &amp; sleep</button>
-        <button class="tab" data-cat="adhd">ADHD &amp; neurodivergent</button>
+        <button class="tab" data-cat="sound">Sound & sleep</button>
+        <button class="tab" data-cat="adhd">ADHD & neurodivergent</button>
         <button class="tab" data-cat="numerology">Numerology</button>
-        <button class="tab" data-cat="habits">Habits</button>
         <button class="tab" data-cat="other">Other</button>
       </div>
       <div class="grid" id="grid"></div>
@@ -178,7 +178,7 @@
     <section id="about" style="padding-bottom:3.5rem;">
       <h2 style="margin-bottom:1rem;">About</h2>
       <p class="about">NumeraKey is a small collection of progressive web apps — numerology readings, breathwork, sound studios, ADHD companions, and self-help tools. Each one runs on your phone, works offline, and is yours to keep. No account, no subscription, no data leaving your device.</p>
-      <p class="about soon-note" style="margin-top:1rem;">These are self-help tools, not therapy, not medical treatment, and not a substitute for professional care. Haven, Nova, Dual Compass, Room to Breathe, Indomita, Narc Escape Guide and Lantern are listed for education and support only.</p>
+      <p class="about soon-note" style="margin-top:1rem;">These are self-help tools, not therapy, not medical treatment, and not a substitute for professional care. Dual Compass and Indomita are listed for education and support only.</p>
     </section>
   </main>
   <footer>
@@ -189,27 +189,16 @@
     const APPS = [
       {cat:"sound", name:"Still", kicker:"Sleep & calm", price:"$39 AUD", desc:"Binaural beds, bronze chimes, ocean breath, and a quiet studio for sleep, calm, anxiety, and focus.", try:"https://still-one-alpha.vercel.app", cover:"#1a2a4a", letter:"S"},
       {cat:"sound", name:"Resonance", kicker:"Breathwork studio", price:"$39 AUD", desc:"Soft layered breath and sound. Journeys and a pace you can stay with as long as you need.", try:"https://resonance-one.netlify.app", cover:"#2a4a3a", letter:"R"},
-      {cat:"sound", name:"AuraFlow Plus", kicker:"Sound mixer", price:"$39 AUD", desc:"Living nature, yours to mix. Ambience, binaural, rain, ocean, birdsong — and your own music.", try:"https://auraflow-plus.grok.me", cover:"#3a4a2a", letter:"A"},
-      {cat:"sound", name:"AuraFlow", kicker:"Frequency studio", price:"$29 AUD", desc:"Solfeggio and binaural rooms — Relax, Sleep, Meditate, Soothe. Add your own music.", try:"https://auraflow.grok.me", cover:"#4a2a3a", letter:"A"},
       {cat:"sound", name:"Entrain", kicker:"Binaural studio", price:"$49 AUD", desc:"Binaural, isochronic, and monaural tones for focus, calm, meditation, and sleep.", try:"https://entrain-seven.netlify.app", cover:"#2a3a4a", letter:"E"},
-      {cat:"sound", name:"Lunara", kicker:"One sound at a time", price:"$39 AUD", desc:"Frequencies for rest, presence, and deep sleep. One sound type at a time — binaural, isochronic, bronze bowls, chant.", try:"https://my-lunara.grok.me", cover:"#3a2a4a", letter:"L"},
-      {cat:"sound", name:"Lumina", kicker:"Bilateral stimulation", price:"$39 AUD", desc:"Rainbow eye-tracking and butterfly-hug stimulation on pure black. Private, on-device.", try:"https://lumina-emdr.grok.me", cover:"#4a3a2a", letter:"L"},
-      {cat:"adhd", name:"Haven", kicker:"ADHD & RSD", price:"$39 AUD", desc:"A sheltered harbour for task paralysis and rejection sting. Check-ins, tiny-step unfreeze, RSD first aid.", try:"https://haven-cbt-adhd-support.grok.me", cover:"#5a3a2a", letter:"H"},
-      {cat:"adhd", name:"Nova", kicker:"ADHD daily", price:"$39 AUD", desc:"A colourful ADHD companion for focus sprints, body-double timers, tiny-step tasks, and mood.", try:"https://adhdmate.grok.me", cover:"#2a4a5a", letter:"N"},
       {cat:"adhd", name:"Dual Compass", kicker:"ADHD & autism", price:"$39 AUD", desc:"For the brain that needs two things at once. Rowan sits with the contradiction — you don't have to pick a side.", try:"https://dual-compass.netlify.app", cover:"#3a5a4a", letter:"D"},
-      {cat:"adhd", name:"Room to Breathe", kicker:"Body double", price:"$39 AUD", desc:"Mira sits with you while you do one small thing. For when the mess or the task feels too big.", try:"https://room-to-breathe.grok.me", cover:"#4a5a3a", letter:"R"},
       {cat:"numerology", name:"Numera", kicker:"Phillips & Goodwin", price:"$79 AUD", desc:"A complete personal reading — birth chart and name numerology, calculated together.", try:"https://numera-six.netlify.app", cover:"#6a4a2a", letter:"N"},
-      {cat:"numerology", name:"Pythagorean Numerology", kicker:"Be your own numerologist", price:"$79 AUD", desc:"Complete readings — Life Path, Expression, Soul Urge, Pinnacles, Challenges, Transits.", try:"https://goodwin.grok.me", cover:"#5a2a4a", letter:"P"},
       {cat:"numerology", name:"Know My Numbers", kicker:"Relationship", price:"$79 AUD", desc:"Compatibility from two names and two birth dates. Score, write-up, save as PDF.", try:"https://know-my-numbers.netlify.app", cover:"#2a5a4a", letter:"K"},
       {cat:"numerology", name:"Nua", kicker:"Name the child", price:"$79 AUD", desc:"Type a first, middle, and last name — the numbers rebuild as you type. Weigh it against the Life Path.", try:"https://nua-baby-names.netlify.app", cover:"#4a2a5a", letter:"N"},
       {cat:"numerology", name:"Cadence", kicker:"Personal year", price:"$79 AUD", desc:"Your personal year, month and day from a birth date. See the cycle you are in.", try:"https://cadence-numbers.netlify.app", cover:"#5a4a2a", letter:"C"},
-      {cat:"habits", name:"Habit Swap", kicker:"Replace, don't erase", price:"$39 AUD", desc:"You cannot simply delete a behaviour — you replace it. See the loop, swap the middle, keep it small.", try:"https://habits-1.grok.me", cover:"#3a4a5a", letter:"H"},
       {cat:"other", name:"Cosmic Tide", kicker:"Astrology", price:"$59 AUD", desc:"Practical astrology inspired by Susan Miller. Timing and weather — not fortune-telling.", try:"https://astrology-susan.netlify.app", cover:"#2a2a5a", letter:"C"},
       {cat:"other", name:"Threshold Tarot", kicker:"Tarot", price:"$39 AUD", desc:"Card of the day, spreads you can act on, deck study, and a journal. Seventy-eight cards.", try:"https://tarot-cosmic.netlify.app", cover:"#5a2a3a", letter:"T"},
       {cat:"other", name:"Spirit Breath", kicker:"Breathwork", price:"$39 AUD", desc:"Guided spiritual breathing inspired by Dan Brulé. Dark studio, rainbow energy.", try:"https://spirit-breath.vercel.app", cover:"#2a5a3a", letter:"S"},
-      {cat:"other", name:"Indomita", kicker:"Self-help companion", price:"$29 AUD", desc:"Pattern recognition and grounding tools for narcissistic manipulation. Supportive — not a substitute for care.", try:"https://indomita-five.netlify.app", cover:"#4a3a5a", letter:"I"},
-      {cat:"other", name:"Narc Escape Guide", kicker:"Pattern guide", price:"$29 AUD", desc:"Type what happened. It names the pattern and what to do next. Education — not a diagnosis.", try:"https://narc-escape-guide.grok.me", cover:"#5a3a4a", letter:"N"},
-      {cat:"other", name:"Lantern", kicker:"Relationship safety", price:"$29 AUD", desc:"A calm space to understand relationship patterns, ground yourself, and plan next steps.", try:"https://lantern.grok.me", cover:"#3a5a5a", letter:"L"}
+      {cat:"other", name:"Indomita", kicker:"Self-help companion", price:"$29 AUD", desc:"Pattern recognition and grounding tools for narcissistic manipulation. Supportive — not a substitute for care.", try:"https://indomita-five.netlify.app", cover:"#4a3a5a", letter:"I"}
     ];
 
     const grid = document.getElementById('grid');

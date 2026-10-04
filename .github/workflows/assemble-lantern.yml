@@ -1,5 +1,8 @@
 name: Assemble Lantern
 on:
+  push:
+    paths:
+      - '.github/workflows/assemble-lantern.yml'
   workflow_dispatch:
 permissions:
   contents: write

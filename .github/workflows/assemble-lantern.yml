@@ -21,7 +21,7 @@ jobs:
               ["p2a0", "p2a1", "p2a2", "p2b0", "p2b1", "p2b2"],
               ["p3a0", "p3a1", "p3a2", "p3b0", "p3b1", "p3b2"],
               ["p4a0", "p4a1", "p4a2", "p4b0", "p4b1", "p4b2"],
-              ["p5a", "p5b"],
+              ["p5a", "p5b0", "p5b1", "p5b2"],
           ]
           chunks = []
           for names in groups:

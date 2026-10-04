@@ -5,17 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NumeraKey</title>
 <style>
-  body{margin:0;background:#000;color:#f3e6c8;font-family:Georgia,serif}
-  img{display:block;width:100%;max-width:720px;margin:0 auto}
-  h1{margin:28px 16px 0;padding:0;text-align:center;color:#C0C0C0;background:#000;font-family:Georgia,serif;font-weight:normal;font-size:34px;letter-spacing:.16em}
-  p.by{text-align:center;letter-spacing:.16em;text-transform:none;font-size:11px;color:#d8d4cc;margin:6px 16px 20px}
-  p.forever{text-align:center;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#d7b56a;margin:18px 16px 40px}
+  body{margin:0;background:#000;color:#d8d4cc;font-family:Georgia,serif}
+  .hero{position:relative;width:100%;max-width:720px;margin:0 auto;background:#000}
+  video{display:block;width:100%;height:auto;background:#000;cursor:pointer}
+  button.sound{position:absolute;right:12px;bottom:14px;background:rgba(0,0,0,.55);color:#d8d4cc;border:1px solid rgba(192,192,192,.5);font-family:Georgia,serif;font-size:12px;letter-spacing:.12em;padding:8px 12px;border-radius:999px;cursor:pointer}
+  p.by{text-align:center;letter-spacing:.16em;font-size:11px;color:#d8d4cc;margin:14px 16px 32px}
 </style>
 </head>
 <body>
-  <h1>NumeraKey</h1>
+  <div class="hero">
+    <video id="hero" src="numerikey-hero-web.mp4" autoplay muted loop playsinline preload="auto"></video>
+    <button class="sound" id="sound" type="button" aria-pressed="false">Tap for sound</button>
+  </div>
   <p class="by">By Judith</p>
-  <img src="hero.jpg" alt="NumeraKey">
-  <p class="forever">Yours. Forever.</p>
+  <script>
+    var v = document.getElementById('hero');
+    var b = document.getElementById('sound');
+    function sync(){
+      var on = !v.muted;
+      b.textContent = on ? 'Sound on' : 'Tap for sound';
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+    function toggle(e){
+      if (e) e.stopPropagation();
+      if (v.muted){
+        v.muted = false;
+        v.volume = 1;
+        var p = v.play();
+        if (p && p.catch) p.catch(function(){});
+      } else {
+        v.muted = true;
+      }
+      sync();
+    }
+    v.addEventListener('click', function(){ toggle(); });
+    b.addEventListener('click', toggle);
+    sync();
+  </script>
 </body>
 </html>

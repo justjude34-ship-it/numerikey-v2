@@ -1,0 +1,78 @@
+<label for="q14-0">Never</label>
+<input type="radio" name="q14" id="q14-1">
+<label for="q14-1">Rarely</label>
+<input type="radio" name="q14" id="q14-2">
+<label for="q14-2">Sometimes</label>
+<input type="radio" name="q14" id="q14-3">
+<label for="q14-3">Often</label>
+<input type="radio" name="q14" id="q14-4">
+<label for="q14-4">Almost always</label>
+</div>
+    <p class="note insight">Partnership includes mutual say. Coercion and punishment for differing opinions are not compromise.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 15 of 18 · Empathy &amp; accountability</p>
+    <p class="q">They show little curiosity about your inner world, yet expect deep attention to theirs.</p>
+    <div class="choices">
+<input type="radio" name="q15" id="q15-0">
+<label for="q15-0">Never</label>
+<input type="radio" name="q15" id="q15-1">
+<label for="q15-1">Rarely</label>
+<input type="radio" name="q15" id="q15-2">
+<label for="q15-2">Sometimes</label>
+<input type="radio" name="q15" id="q15-3">
+<label for="q15-3">Often</label>
+<input type="radio" name="q15" id="q15-4">
+<label for="q15-4">Almost always</label>
+</div>
+    <p class="note insight">One-way emotional labour is depleting. Reciprocal care means both people matter — including you.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 16 of 18 · Devaluation &amp; criticism</p>
+    <p class="q">Publicly they may seem charming; privately you experience a harsher, colder, or more critical version.</p>
+    <div class="choices">
+<input type="radio" name="q16" id="q16-0">
+<label for="q16-0">Never</label>
+<input type="radio" name="q16" id="q16-1">
+<label for="q16-1">Rarely</label>
+<input type="radio" name="q16" id="q16-2">
+<label for="q16-2">Sometimes</label>
+<input type="radio" name="q16" id="q16-3">
+<label for="q16-3">Often</label>
+<input type="radio" name="q16" id="q16-4">
+<label for="q16-4">Almost always</label>
+</div>
+    <p class="note insight">A large gap between public image and private behaviour can leave you feeling crazy or isolated — “no one else sees this.” You are not imagining it.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 17 of 18 · Idealization &amp; love-bombing</p>
+    <p class="q">After you try to leave or set a boundary, they become unusually loving, apologetic, or desperate — until things settle, then the old patterns return.</p>
+    <div class="choices">
+<input type="radio" name="q17" id="q17-0">
+<label for="q17-0">Never</label>
+<input type="radio" name="q17" id="q17-1">
+<label for="q17-1">Rarely</label>
+<input type="radio" name="q17" id="q17-2">
+<label for="q17-2">Sometimes</label>
+<input type="radio" name="q17" id="q17-3">
+<label for="q17-3">Often</label>
+<input type="radio" name="q17" id="q17-4">
+<label for="q17-4">Almost always</label>
+</div>
+    <p class="note insight">Hoovering (pulling you back in) often resets the cycle rather than ending it. Lasting change shows up in consistent behaviour over time, not crisis romance.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 18 of 18 · How you feel</p>
+    <p class="q">You feel guilty for needing space, boundaries, or support — as if your needs are selfish or “too much.”</p>
+    <div class="choices">
+<input type="radio" name="q18" id="q18-0">
+<label for="q18-0">Never</label>
+<input type="radio" name="q18" id="q18-1">
+<label for="q18-1">Rarely</label>
+<input type="radio" name="q18" id="q18-2">
+<label for="q18-2">Sometimes</label>
+<input type="radio" name="q18" id="q18-3">
+<label for="q18-3">Often</label>
+<input type="radio" name="q18" id="q18-4">
+<label for="q18-4">Almost always</label>
+</div>

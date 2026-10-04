@@ -1,8 +1,5 @@
 name: Assemble Lantern
 on:
-  push:
-    paths:
-      - 'lantern/p*.b64'
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,20 +11,37 @@ jobs:
       - name: Build Lantern.html
         run: |
           python3 - <<'PY'
-          import base64, pathlib
+          import base64, hashlib, pathlib
+          groups = [
+              ["p0a", "p0b"],
+              ["p1a0", "p1a1", "p1a2", "p1b"],
+              ["p2a0", "p2a1", "p2a2", "p2b0", "p2b1", "p2b2"],
+              ["p3a0", "p3a1", "p3a2", "p3b0", "p3b1", "p3b2"],
+              ["p4a0", "p4a1", "p4a2", "p4b0", "p4b1", "p4b2"],
+              ["p5a", "p5b"],
+          ]
           chunks = []
-          for i in range(6):
-              p = pathlib.Path(f'lantern/p{i}.b64')
-              if not p.exists():
-                  raise SystemExit(f'missing {p}')
-              chunks.append(base64.b64decode(p.read_text().strip()))
-          html = b''.join(chunks)
-          if not html.startswith(b'<!DOCTYPE html>'):
+          for names in groups:
+              b64 = ""
+              for name in names:
+                  path = pathlib.Path(f"lantern/{name}.b64")
+                  if not path.exists():
+                      raise SystemExit(f"missing {path}")
+                  b64 += path.read_text().strip()
+              chunks.append(base64.b64decode(b64, validate=True))
+          html = b"".join(chunks)
+          digest = hashlib.sha256(html).hexdigest()
+          expect = "0093195ccaffe5a5466f07bbf2b97ad3ed07de2b95495ac7e6bd3cb22763e451"
+          if not html.startswith(b"<!DOCTYPE html>"):
               raise SystemExit(html[:40])
-          if html.count(b'data:image/jpeg;base64') < 4:
-              raise SystemExit('missing images')
-          pathlib.Path('Lantern.html').write_bytes(html)
-          print('bytes', len(html))
+          if html.count(b"data:image/jpeg;base64") < 4:
+              raise SystemExit("missing images")
+          if b"$file" in html:
+              raise SystemExit("placeholder")
+          if len(html) != 52017 or digest != expect:
+              raise SystemExit(f"mismatch {len(html)} {digest}")
+          pathlib.Path("Lantern.html").write_bytes(html)
+          print("bytes", len(html), digest)
           PY
       - name: Commit assembled file
         run: |

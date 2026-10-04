@@ -1,0 +1,78 @@
+<input type="radio" name="q9" id="q9-4">
+<label for="q9-4">Almost always</label>
+</div>
+    <p class="note insight">Lack of empathy leaves wounds unattended. Being heard and taken seriously is a baseline of care, not a luxury.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 10 of 18 · Empathy &amp; accountability</p>
+    <p class="q">They rarely take real responsibility — blame shifts to you, circumstances, or “jokes,” with little lasting change.</p>
+    <div class="choices">
+<input type="radio" name="q10" id="q10-0">
+<label for="q10-0">Never</label>
+<input type="radio" name="q10" id="q10-1">
+<label for="q10-1">Rarely</label>
+<input type="radio" name="q10" id="q10-2">
+<label for="q10-2">Sometimes</label>
+<input type="radio" name="q10" id="q10-3">
+<label for="q10-3">Often</label>
+<input type="radio" name="q10" id="q10-4">
+<label for="q10-4">Almost always</label>
+</div>
+    <p class="note insight">Accountability means owning impact and changing behaviour. Empty apologies without change keep the cycle spinning.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 11 of 18 · How you feel</p>
+    <p class="q">You feel anxious, drained, or “not yourself” more often around them than with other people in your life.</p>
+    <div class="choices">
+<input type="radio" name="q11" id="q11-0">
+<label for="q11-0">Never</label>
+<input type="radio" name="q11" id="q11-1">
+<label for="q11-1">Rarely</label>
+<input type="radio" name="q11" id="q11-2">
+<label for="q11-2">Sometimes</label>
+<input type="radio" name="q11" id="q11-3">
+<label for="q11-3">Often</label>
+<input type="radio" name="q11" id="q11-4">
+<label for="q11-4">Almost always</label>
+</div>
+    <p class="note insight">Your nervous system notices patterns before your mind fully names them. Persistent dread or depletion is meaningful information.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 12 of 18 · How you feel</p>
+    <p class="q">You second-guess your worth, needs, or reality more than you used to — or feel lonely even when you’re together.</p>
+    <div class="choices">
+<input type="radio" name="q12" id="q12-0">
+<label for="q12-0">Never</label>
+<input type="radio" name="q12" id="q12-1">
+<label for="q12-1">Rarely</label>
+<input type="radio" name="q12" id="q12-2">
+<label for="q12-2">Sometimes</label>
+<input type="radio" name="q12" id="q12-3">
+<label for="q12-3">Often</label>
+<input type="radio" name="q12" id="q12-4">
+<label for="q12-4">Almost always</label>
+</div>
+    <p class="note insight">Emotional loneliness inside a relationship is a deep form of pain. Reconnecting with your own voice is a brave, healthy step.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 13 of 18 · Gaslighting &amp; reality distortion</p>
+    <p class="q">They use private information you shared in trust against you later — during fights or to humiliate you.</p>
+    <div class="choices">
+<input type="radio" name="q13" id="q13-0">
+<label for="q13-0">Never</label>
+<input type="radio" name="q13" id="q13-1">
+<label for="q13-1">Rarely</label>
+<input type="radio" name="q13" id="q13-2">
+<label for="q13-2">Sometimes</label>
+<input type="radio" name="q13" id="q13-3">
+<label for="q13-3">Often</label>
+<input type="radio" name="q13" id="q13-4">
+<label for="q13-4">Almost always</label>
+</div>
+    <p class="note insight">Weaponizing vulnerability breaks safety. Trust thrives when soft spots are protected, not stored as ammunition.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 14 of 18 · Control &amp; isolation</p>
+    <p class="q">They make big decisions that affect you without real input — or punish you (silent treatment, threats, guilt) if you disagree.</p>
+    <div class="choices">
+<input type="radio" name="q14" id="q14-0">

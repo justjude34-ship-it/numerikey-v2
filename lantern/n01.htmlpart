@@ -1,0 +1,86 @@
+#tab-ground:checked ~ nav label[for="tab-ground"] i,
+#tab-safety:checked ~ nav label[for="tab-safety"] i,
+#tab-help:checked ~ nav label[for="tab-help"] i{width:6px;height:6px;border-radius:50%;background:var(--teal);margin:0 auto 4px}
+.q{font-size:1.05rem;color:var(--fg)}
+.choices{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.choices input{position:absolute;opacity:0;width:1px;height:1px;padding:0;border:0}
+.choices label{display:block;text-align:left;background:var(--elev);border:1px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer}
+.choices input:checked + label{border-color:var(--purple);background:rgba(167,139,250,.16);color:#fff}
+.insight{margin-top:12px}
+.row{display:flex;gap:8px;margin-top:14px}
+.btn{flex:1;border:0;border-radius:999px;padding:12px 14px;font-weight:600;cursor:pointer}
+.btn.gold{background:var(--teal);color:#10211f}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.note{font-size:.8rem;color:var(--faint)}
+label.f{display:block;font-size:.82rem;color:var(--gold);margin:10px 0 4px}
+input[type="text"],textarea{width:100%;background:var(--elev);border:1px solid var(--line);border-radius:12px;padding:12px}
+textarea{min-height:72px;resize:vertical}
+.step{padding:10px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.step b{color:var(--fg)}
+.warn{font-size:.82rem;color:var(--faint);margin:8px 16px 0}
+a{color:var(--teal)}
+</style>
+</head>
+<body>
+<input class="tab" type="radio" name="screen" id="tab-home" checked>
+<input class="tab" type="radio" name="screen" id="tab-assess">
+<input class="tab" type="radio" name="screen" id="tab-ground">
+<input class="tab" type="radio" name="screen" id="tab-safety">
+<input class="tab" type="radio" name="screen" id="tab-help">
+
+<div id="view-home" class="view">
+  <div class="hero">
+<img id="heroImg" alt="A soft glowing lantern on a quiet stone path at night" src="@@HERO@@">
+</div>
+  <div class="wrap intro">
+    <p class="kicker">Private · On this device</p>
+    <h1>Lantern</h1>
+    <p class="tag">A calm space to understand relationship patterns, steady yourself, and take healthy next steps — at your pace, without shame.</p>
+  </div>
+  <div class="card">
+    <p>You are not “too sensitive” for noticing what hurts. Lantern keeps your notes private, works in this file, and is written to leave you feeling stronger — not more broken.</p>
+  </div>
+  <div class="tools">
+    <label class="tool" for="tab-assess">
+<span class="dot" style="background:#a78bfa">
+</span>
+<div>
+<b>Assess</b>
+<span>A gentle quiz on red flags and emotional impact — clarity without harsh labels.</span>
+</div>
+</label>
+    <label class="tool" for="tab-ground">
+<span class="dot" style="background:#7ee0d6">
+</span>
+<div>
+<b>Ground</b>
+<span>Breathing, 5-4-3-2-1, body scan, and self-validation when you feel shaken.</span>
+</div>
+</label>
+    <label class="tool" for="tab-safety">
+<span class="dot" style="background:#9ecbff">
+</span>
+<div>
+<b>Safety</b>
+<span>Contacts, exit notes, digital privacy tips — stored only on this device.</span>
+</div>
+</label>
+    <label class="tool" for="tab-help">
+<span class="dot" style="background:#86efac">
+</span>
+<div>
+<b>Help</b>
+<span>Hotlines, next-step guidance, and books if you stay, set boundaries, or leave.</span>
+</div>
+</label>
+  </div>
+  <p class="warn">Not a diagnosis or crisis service. If you are in danger in Australia, call 000. 1800RESPECT is 1800 737 732.</p>
+</div>
+
+<div id="view-assess" class="view">
+  <div class="wrap intro">
+    <p class="kicker">Assess</p>
+    <h1 style="font-size:2rem">Relationship patterns</h1>
+    <p class="tag">Answer honestly for yourself. There are no wrong answers. Private on this screen. Not a diagnosis.</p>
+  </div>
+  <div class="card">

@@ -14,33 +14,31 @@ jobs:
       - name: Build Lantern.html
         run: |
           python3 - <<'PY'
-          import base64, hashlib, pathlib
+          import base64, hashlib, pathlib, re
           parts = []
-          for i in range(11):
-              path = pathlib.Path(f"lantern/t{i:02d}.b64")
+          for i in range(9):
+              path = pathlib.Path(f"lantern/n{i:02d}.htmlpart")
               if not path.exists():
                   raise SystemExit(f"missing {path}")
-              parts.append(base64.b64decode(path.read_text().strip(), validate=True))
-          html = b"".join(parts).decode("utf-8")
+              parts.append(path.read_text())
+          html = "".join(parts)
           for name in ("HERO", "ASSESS", "GROUND", "PRIVACY"):
               token = f"@@{name}@@"
               blob = pathlib.Path(f"{name.lower()}.b64").read_text().strip()
               html = html.replace(token, "data:image/jpeg;base64," + blob)
-          if "@@" in html or "$file" in html:
-              raise SystemExit("token left")
+          if "@@" in html or "$file" in html or "<script" in html:
+              raise SystemExit("bad token")
           raw = html.encode("utf-8")
           if not raw.startswith(b"<!DOCTYPE html>"):
-              raise SystemExit(raw[:40])
+              raise SystemExit("doctype")
           if raw.count(b'data:image/jpeg;base64') < 4:
-              raise SystemExit("missing images")
-          if b'src="data:image/jpeg;base64,' not in raw:
-              raise SystemExit("hero src missing")
+              raise SystemExit("images")
+          if b'id="tab-home" checked' not in raw:
+              raise SystemExit("tabs")
           digest = hashlib.sha256(raw).hexdigest()
-          expect = "cb2eb3de580210c645cdfe08e33d055596490651271e23c8202c5a0c6aae864a"
-          if len(raw) != 52341 or digest != expect:
+          expect = "488004e12183e865f918be8d6e0a449292e80d169dcba2aeff9bdfe79d81d30f"
+          if len(raw) != 58696 or digest != expect:
               raise SystemExit(f"mismatch {len(raw)} {digest}")
-          # confirm hero jpeg decodes
-          import re
           m = re.search(r'id="heroImg"[^>]*src="data:image/jpeg;base64,([A-Za-z0-9+/=]+)"', html)
           if not m:
               raise SystemExit("hero tag")
@@ -48,7 +46,7 @@ jobs:
           if not (jpg.startswith(b"\xff\xd8") and jpg.endswith(b"\xff\xd9")):
               raise SystemExit("hero jpeg")
           pathlib.Path("Lantern.html").write_bytes(raw)
-          print("bytes", len(raw), digest, "hero", len(jpg))
+          print("bytes", len(raw), digest)
           PY
       - name: Commit assembled file
         run: |
@@ -59,5 +57,5 @@ jobs:
             echo unchanged
             exit 0
           fi
-          git commit -m "Fix Lantern hero image src"
+          git commit -m "Make Lantern tabs work without JavaScript"
           git push

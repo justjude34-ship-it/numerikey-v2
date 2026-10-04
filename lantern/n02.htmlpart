@@ -1,0 +1,72 @@
+    <img class="shot" id="assessImg" alt="An open book with soft purple and teal light" src="@@ASSESS@@">
+    <p>All 18 questions are on this screen. Tap an answer to mark it. The note under each question is the reflection that used to appear after you answered.</p>
+  </div>
+  <div class="card qcard">
+    <p class="note">Question 1 of 18 · Idealization & love-bombing</p>
+    <p class="q">At the start (or after conflict), they flooded you with praise, gifts, or intense attention that felt almost too good to be true.</p>
+    <div class="choices">
+<input type="radio" name="q1" id="q1-0">
+<label for="q1-0">Never</label>
+<input type="radio" name="q1" id="q1-1">
+<label for="q1-1">Rarely</label>
+<input type="radio" name="q1" id="q1-2">
+<label for="q1-2">Sometimes</label>
+<input type="radio" name="q1" id="q1-3">
+<label for="q1-3">Often</label>
+<input type="radio" name="q1" id="q1-4">
+<label for="q1-4">Almost always</label>
+</div>
+    <p class="note insight">Love-bombing can create a powerful bond quickly. The intensity is the point — it can make later coldness or criticism feel like a loss of something precious you must earn back.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 2 of 18 · Idealization & love-bombing</p>
+    <p class="q">They talked about a perfect shared future (moving in, marriage, big plans) very early, before you really knew each other.</p>
+    <div class="choices">
+<input type="radio" name="q2" id="q2-0">
+<label for="q2-0">Never</label>
+<input type="radio" name="q2" id="q2-1">
+<label for="q2-1">Rarely</label>
+<input type="radio" name="q2" id="q2-2">
+<label for="q2-2">Sometimes</label>
+<input type="radio" name="q2" id="q2-3">
+<label for="q2-3">Often</label>
+<input type="radio" name="q2" id="q2-4">
+<label for="q2-4">Almost always</label>
+</div>
+    <p class="note insight">Future-faking paints a beautiful picture that may never be followed through. It can keep you invested in a story rather than the present reality.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 3 of 18 · Gaslighting & reality distortion</p>
+    <p class="q">They deny saying or doing things you clearly remember — or insist you are “too sensitive,” “crazy,” or “remembering wrong.”</p>
+    <div class="choices">
+<input type="radio" name="q3" id="q3-0">
+<label for="q3-0">Never</label>
+<input type="radio" name="q3" id="q3-1">
+<label for="q3-1">Rarely</label>
+<input type="radio" name="q3" id="q3-2">
+<label for="q3-2">Sometimes</label>
+<input type="radio" name="q3" id="q3-3">
+<label for="q3-3">Often</label>
+<input type="radio" name="q3" id="q3-4">
+<label for="q3-4">Almost always</label>
+</div>
+    <p class="note insight">Gaslighting erodes trust in yourself. Over time you may second-guess every feeling. Your memory and feelings are still valid, even when someone works hard to rewrite them.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 4 of 18 · Gaslighting & reality distortion</p>
+    <p class="q">After arguments, you often end up apologizing for something you didn’t do — or feel confused about what actually happened.</p>
+    <div class="choices">
+<input type="radio" name="q4" id="q4-0">
+<label for="q4-0">Never</label>
+<input type="radio" name="q4" id="q4-1">
+<label for="q4-1">Rarely</label>
+<input type="radio" name="q4" id="q4-2">
+<label for="q4-2">Sometimes</label>
+<input type="radio" name="q4" id="q4-3">
+<label for="q4-3">Often</label>
+<input type="radio" name="q4" id="q4-4">
+<label for="q4-4">Almost always</label>
+</div>
+    <p class="note insight">When conflict consistently leaves you disoriented or blamed, it may be a pattern of deflection rather than repair. Healthy repair feels clarifying, not foggy.</p>
+  </div>
+<div class="card qcard">

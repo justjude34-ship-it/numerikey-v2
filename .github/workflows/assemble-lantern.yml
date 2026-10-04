@@ -1,0 +1,42 @@
+name: Assemble Lantern
+on:
+  push:
+    paths:
+      - 'lantern/p*.b64'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Lantern.html
+        run: |
+          python3 - <<'PY'
+          import base64, pathlib
+          chunks = []
+          for i in range(6):
+              p = pathlib.Path(f'lantern/p{i}.b64')
+              if not p.exists():
+                  raise SystemExit(f'missing {p}')
+              chunks.append(base64.b64decode(p.read_text().strip()))
+          html = b''.join(chunks)
+          if not html.startswith(b'<!DOCTYPE html>'):
+              raise SystemExit(html[:40])
+          if html.count(b'data:image/jpeg;base64') < 4:
+              raise SystemExit('missing images')
+          pathlib.Path('Lantern.html').write_bytes(html)
+          print('bytes', len(html))
+          PY
+      - name: Commit assembled file
+        run: |
+          git config user.name "justjude34-ship-it"
+          git config user.email "justjude34@gmail.com"
+          git add Lantern.html
+          if git diff --cached --quiet; then
+            echo unchanged
+            exit 0
+          fi
+          git commit -m "Add Lantern.html with embedded artwork"
+          git push

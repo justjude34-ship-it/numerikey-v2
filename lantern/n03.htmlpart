@@ -1,0 +1,79 @@
+    <p class="note">Question 5 of 18 · Devaluation &amp; criticism</p>
+    <p class="q">Compliments or affection alternate with put-downs, mockery, or cold silence — sometimes without clear reason.</p>
+    <div class="choices">
+<input type="radio" name="q5" id="q5-0">
+<label for="q5-0">Never</label>
+<input type="radio" name="q5" id="q5-1">
+<label for="q5-1">Rarely</label>
+<input type="radio" name="q5" id="q5-2">
+<label for="q5-2">Sometimes</label>
+<input type="radio" name="q5" id="q5-3">
+<label for="q5-3">Often</label>
+<input type="radio" name="q5" id="q5-4">
+<label for="q5-4">Almost always</label>
+</div>
+    <p class="note insight">The idealize–devalue cycle keeps you chasing the “good” version of them. Intermittent warmth is powerfully reinforcing; you deserve steadier respect.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 6 of 18 · Devaluation &amp; criticism</p>
+    <p class="q">They criticize your appearance, intelligence, friends, family, or achievements in ways that leave you smaller.</p>
+    <div class="choices">
+<input type="radio" name="q6" id="q6-0">
+<label for="q6-0">Never</label>
+<input type="radio" name="q6" id="q6-1">
+<label for="q6-1">Rarely</label>
+<input type="radio" name="q6" id="q6-2">
+<label for="q6-2">Sometimes</label>
+<input type="radio" name="q6" id="q6-3">
+<label for="q6-3">Often</label>
+<input type="radio" name="q6" id="q6-4">
+<label for="q6-4">Almost always</label>
+</div>
+    <p class="note insight">Chronic criticism isn’t “honesty” or “helping you grow.” It’s a way of keeping you off-balance. Kind feedback builds up; this kind of talk wears down.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 7 of 18 · Control &amp; isolation</p>
+    <p class="q">They monitor your phone, messages, location, spending, or social life — or get angry when you spend time with others.</p>
+    <div class="choices">
+<input type="radio" name="q7" id="q7-0">
+<label for="q7-0">Never</label>
+<input type="radio" name="q7" id="q7-1">
+<label for="q7-1">Rarely</label>
+<input type="radio" name="q7" id="q7-2">
+<label for="q7-2">Sometimes</label>
+<input type="radio" name="q7" id="q7-3">
+<label for="q7-3">Often</label>
+<input type="radio" name="q7" id="q7-4">
+<label for="q7-4">Almost always</label>
+</div>
+    <p class="note insight">Control often disguises itself as protection or love. Autonomy and privacy are normal in healthy relationships.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 8 of 18 · Control &amp; isolation</p>
+    <p class="q">You feel you must manage their moods — walking on eggshells to avoid anger, sulking, or punishment.</p>
+    <div class="choices">
+<input type="radio" name="q8" id="q8-0">
+<label for="q8-0">Never</label>
+<input type="radio" name="q8" id="q8-1">
+<label for="q8-1">Rarely</label>
+<input type="radio" name="q8" id="q8-2">
+<label for="q8-2">Sometimes</label>
+<input type="radio" name="q8" id="q8-3">
+<label for="q8-3">Often</label>
+<input type="radio" name="q8" id="q8-4">
+<label for="q8-4">Almost always</label>
+</div>
+    <p class="note insight">Hypervigilance is exhausting. You are not responsible for regulating another adult’s every emotion, especially through fear of consequences.</p>
+  </div>
+<div class="card qcard">
+    <p class="note">Question 9 of 18 · Empathy &amp; accountability</p>
+    <p class="q">When you share hurt feelings, they dismiss, mock, or turn the conversation back to how hard things are for them.</p>
+    <div class="choices">
+<input type="radio" name="q9" id="q9-0">
+<label for="q9-0">Never</label>
+<input type="radio" name="q9" id="q9-1">
+<label for="q9-1">Rarely</label>
+<input type="radio" name="q9" id="q9-2">
+<label for="q9-2">Sometimes</label>
+<input type="radio" name="q9" id="q9-3">
+<label for="q9-3">Often</label>

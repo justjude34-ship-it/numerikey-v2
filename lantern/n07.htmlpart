@@ -1,0 +1,85 @@
+  </div>
+  <div class="card">
+    <img class="shot" id="groundImg" alt="A still pond with a single stone and gentle ripples" src="@@GROUND@@">
+    <h2>5-4-3-2-1</h2>
+    <p>After an argument, a spiral, or feeling far away.</p>
+    <div class="step">
+<b>5</b> things you can see. Colours, shapes, light.</div>
+    <div class="step">
+<b>4</b> things you can feel. Feet, fabric, temperature.</div>
+    <div class="step">
+<b>3</b> sounds. Near or far, including your breath.</div>
+    <div class="step">
+<b>2</b> scents, or imagine two safe ones.</div>
+    <div class="step">
+<b>1</b> taste, or a slow sip of water.</div>
+  </div>
+  <div class="card">
+    <h2>Box breathing</h2>
+    <p>For a racing heart, or before a hard conversation. In for 4, hold 4, out for 4, hold 4. Four rounds is enough.</p>
+    <h2 style="margin-top:14px">Body scan</h2>
+    <p>Feet, legs, belly, chest, jaw. Soften a millimetre if you can. You are allowed to rest your face.</p>
+  </div>
+  <div class="card">
+    <h2>A steady inner voice</h2>
+    <div class="step">My feeling is allowed. Feelings are messengers, not verdicts.</div>
+    <div class="step">My memory matters. Disagreement does not erase what I lived.</div>
+    <div class="step">My needs are human. Respect, rest, and safety are not selfish.</div>
+    <div class="step">I am not the problem for noticing.</div>
+  </div>
+</div>
+
+<div id="view-safety" class="view">
+  <div class="wrap intro">
+    <p class="kicker">Safety</p>
+    <h1 style="font-size:2rem">A quiet plan</h1>
+    <p class="tag">Nothing is required. If you are in immediate danger, call emergency services now.</p>
+  </div>
+  <form class="card">
+    <img class="shot" id="privacyImg" alt="A warm flame held safely inside a soft protective light" style="object-position:center 45%;height:220px" src="@@PRIVACY@@">
+    <label class="f" for="safePlace">A place you could go</label>
+    <input id="safePlace" type="text" placeholder="Friend, family, shelter">
+    <label class="f" for="codeWord">Code word with one trusted person</label>
+    <input id="codeWord" type="text" placeholder="A word that means call me or come get me">
+    <label class="f" for="bag">What to take</label>
+    <textarea id="bag" placeholder="ID, meds, keys, charger, a little cash">
+</textarea>
+    <label class="f" for="contacts">People who can help</label>
+    <textarea id="contacts" placeholder="Name and number, one per line">
+</textarea>
+    <p class="note">These notes stay in the form until you clear them or leave the page. This screen does not save them.</p>
+    <div class="row">
+<button class="btn ghost" type="reset">Clear plan</button>
+</div>
+  </form>
+  <div class="card">
+    <h2>While you are in contact</h2>
+    <div class="step">
+<b>Grey rock.</b> Short, dull answers. “Okay.” “I’ll check.”</div>
+    <div class="step">
+<b>Broken record.</b> One boundary, repeated. “I’m not discussing this tonight.”</div>
+    <div class="step">
+<b>Pause.</b> “I need time to think — I’ll reply tomorrow.”</div>
+    <div class="step">
+<b>Leave.</b> “I’m ending this call now.” You don’t need permission to stop.</div>
+  </div>
+</div>
+
+<div id="view-help" class="view">
+  <div class="wrap intro">
+    <p class="kicker">Help</p>
+    <h1 style="font-size:2rem">You don’t have to do this alone</h1>
+  </div>
+  <div class="card" id="helpCard">
+    <div class="step">
+<b>
+<a href="https://www.1800respect.org.au/" target="_blank" rel="noopener">1800RESPECT (Australia)</a>
+</b>
+<br>National sexual assault, domestic and family violence counselling — 24/7. Call 1800 737 732.</div>
+<div class="step">
+<b>
+<a href="https://www.thehotline.org/" target="_blank" rel="noopener">National Domestic Violence Hotline (US)</a>
+</b>
+<br>Confidential support, 24/7. Call 1-800-799-7233 or text START to 88788.</div>
+<div class="step">
+<b>
